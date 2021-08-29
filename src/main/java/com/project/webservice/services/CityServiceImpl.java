@@ -19,7 +19,6 @@ public class CityServiceImpl implements CityService {
 	public String addNewCity(CityRequest cityRequest) {
 		String message = null;
 		if (cityRequest != null) {
-
 			City c = new City();
 			c.setCityName(cityRequest.getCityName());
 			c.setCountry(cityRequest.getCountry());
@@ -27,7 +26,6 @@ public class CityServiceImpl implements CityService {
 			c.setCityDescription(cityRequest.getCityDescription());
 			cityRepository.save(c);
 			message = "Saved";
-
 		}
 		return message;
 	}
@@ -35,6 +33,18 @@ public class CityServiceImpl implements CityService {
 	@Override
 	public List<City> viewAllCity() {
 		return (List<City>) cityRepository.findAll();
+	}
+
+	@Override
+	public String deleteCity(int cityId) {
+		String message = null;
+		if(cityId <= 0 || cityId > 0) {
+			cityRepository.deleteById(cityId);
+			message = "Deleted";
+		}else {
+			message = "Id cannot be null";
+		}
+		return message;
 	}
 
 }

@@ -11,4 +11,6 @@ public interface CityService {
 
 	List<City> viewAllCity();
 
+	String deleteCity(int cityId);
+
 }

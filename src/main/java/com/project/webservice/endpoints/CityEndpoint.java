@@ -3,6 +3,7 @@ package com.project.webservice.endpoints;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,9 +25,14 @@ public class CityEndpoint {
 	public String addNewCity(@RequestBody CityRequest cityRequest) {
 		return cityService.addNewCity(cityRequest);
 	}
-	
+
 	@GetMapping(path = "/all")
-	public List<City> viewAllCity(){
+	public List<City> viewAllCity() {
 		return cityService.viewAllCity();
+	}
+
+	@DeleteMapping
+	public String deleteCity(int cityId) {
+		return cityService.deleteCity(cityId);
 	}
 }
