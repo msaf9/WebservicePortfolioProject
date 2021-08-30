@@ -31,8 +31,13 @@ public class CityEndpoint {
 		return cityService.viewAllCity();
 	}
 
-	@DeleteMapping
+	@DeleteMapping(path = "delete")
 	public String deleteCity(int cityId) {
 		return cityService.deleteCity(cityId);
+	}
+
+	@DeleteMapping(path = "/deleteAll" )
+	public String deleteAll() {
+		return cityService.deleteAll();
 	}
 }

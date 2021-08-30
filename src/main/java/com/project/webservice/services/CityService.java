@@ -13,4 +13,6 @@ public interface CityService {
 
 	String deleteCity(int cityId);
 
+	String deleteAll();
+
 }

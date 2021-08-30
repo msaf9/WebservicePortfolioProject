@@ -47,4 +47,12 @@ public class CityServiceImpl implements CityService {
 		return message;
 	}
 
+	@Override
+	public String deleteAll() {
+		String message = null;
+		cityRepository.deleteAll();
+		message = "All deleted";
+		return message;
+	}
+
 }
