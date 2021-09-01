@@ -38,10 +38,10 @@ public class CityServiceImpl implements CityService {
 	@Override
 	public String deleteCity(int cityId) {
 		String message = null;
-		if(cityId <= 0 || cityId > 0) {
+		if (cityId <= 0 || cityId > 0) {
 			cityRepository.deleteById(cityId);
 			message = "Deleted";
-		}else {
+		} else {
 			message = "Id cannot be null";
 		}
 		return message;
@@ -52,6 +52,19 @@ public class CityServiceImpl implements CityService {
 		String message = null;
 		cityRepository.deleteAll();
 		message = "All deleted";
+		return message;
+	}
+
+	@Override
+	public String editCity(City cityRequest) {
+		String message = null;
+		City cityUpdate = cityRepository.findById(cityRequest.getCityId()).get();
+		cityUpdate.setCityName(cityRequest.getCityName());
+		cityUpdate.setCountry(cityRequest.getCountry());
+		cityUpdate.setState(cityRequest.getState());
+		cityUpdate.setCityDescription(cityRequest.getCityDescription());
+		cityRepository.save(cityUpdate);
+		message = "Updated";
 		return message;
 	}
 
