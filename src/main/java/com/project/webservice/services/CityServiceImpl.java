@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.project.webservice.entity.City;
 import com.project.webservice.repository.CityRepository;
 import com.project.webservice.request.CityRequest;
+import com.project.webservice.response.CityResponse;
 
 @Service
 public class CityServiceImpl implements CityService {
@@ -56,16 +57,16 @@ public class CityServiceImpl implements CityService {
 	}
 
 	@Override
-	public String editCity(City cityRequest) {
-		String message = null;
+	public CityResponse editCity(City cityRequest) {
+		CityResponse response = new CityResponse();
 		City cityUpdate = cityRepository.findById(cityRequest.getCityId()).get();
 		cityUpdate.setCityName(cityRequest.getCityName());
 		cityUpdate.setCountry(cityRequest.getCountry());
 		cityUpdate.setState(cityRequest.getState());
 		cityUpdate.setCityDescription(cityRequest.getCityDescription());
 		cityRepository.save(cityUpdate);
-		message = "Updated";
-		return message;
+		response.setMessage("Updated");
+		return response;
 	}
 
 	@Override

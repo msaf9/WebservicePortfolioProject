@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.project.webservice.entity.City;
 import com.project.webservice.request.CityRequest;
+import com.project.webservice.response.CityResponse;
 import com.project.webservice.services.CityService;
 
 @RestController
@@ -43,7 +44,7 @@ public class CityEndpointV1 {
 	}
 	
 	@PutMapping(path = "/update")
-	public String editCity(@RequestBody City cityRequest) {
+	public CityResponse editCity(@RequestBody City cityRequest) {
 		return cityService.editCity(cityRequest);
 	}
 	

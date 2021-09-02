@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.project.webservice.entity.City;
 import com.project.webservice.request.CityRequest;
+import com.project.webservice.response.CityResponse;
 
 public interface CityService {
 
@@ -15,7 +16,7 @@ public interface CityService {
 
 	String deleteAll();
 
-	String editCity(City cityRequest);
+	CityResponse editCity(City cityRequest);
 
 	City viewCity(int id);
 
