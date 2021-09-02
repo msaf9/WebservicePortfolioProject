@@ -68,4 +68,10 @@ public class CityServiceImpl implements CityService {
 		return message;
 	}
 
+	@Override
+	public City viewCity(int id) {
+		City cityView = cityRepository.findById(id).get();
+		return cityView;
+	}
+
 }

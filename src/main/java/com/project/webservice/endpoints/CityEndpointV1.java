@@ -17,7 +17,7 @@ import com.project.webservice.services.CityService;
 
 @RestController
 @RequestMapping(path = "/city")
-public class CityEndpoint {
+public class CityEndpointV1 {
 
 	@Autowired
 	private CityService cityService;
@@ -45,5 +45,10 @@ public class CityEndpoint {
 	@PutMapping(path = "/update")
 	public String editCity(@RequestBody City cityRequest) {
 		return cityService.editCity(cityRequest);
+	}
+	
+	@GetMapping(path = "/city/{id}")
+	public City viewCity(int id) {
+		return cityService.viewCity(id);
 	}
 }

@@ -17,4 +17,6 @@ public interface CityService {
 
 	String editCity(City cityRequest);
 
+	City viewCity(int id);
+
 }
