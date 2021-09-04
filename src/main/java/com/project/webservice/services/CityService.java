@@ -8,13 +8,13 @@ import com.project.webservice.response.CityResponse;
 
 public interface CityService {
 
-	String addNewCity(CityRequest cityRequest);
+	CityResponse addNewCity(CityRequest cityRequest);
 
 	List<City> viewAllCity();
 
-	String deleteCity(int cityId);
+	CityResponse deleteCity(int cityId);
 
-	String deleteAll();
+	CityResponse deleteAll();
 
 	CityResponse editCity(City cityRequest);
 

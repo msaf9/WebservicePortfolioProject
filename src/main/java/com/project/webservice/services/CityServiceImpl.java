@@ -17,8 +17,8 @@ public class CityServiceImpl implements CityService {
 	private CityRepository cityRepository;
 
 	@Override
-	public String addNewCity(CityRequest cityRequest) {
-		String message = null;
+	public CityResponse addNewCity(CityRequest cityRequest) {
+		CityResponse message = new CityResponse();
 		if (cityRequest != null) {
 			City c = new City();
 			c.setCityName(cityRequest.getCityName());
@@ -26,7 +26,7 @@ public class CityServiceImpl implements CityService {
 			c.setState(cityRequest.getState());
 			c.setCityDescription(cityRequest.getCityDescription());
 			cityRepository.save(c);
-			message = "Saved";
+			message.setMessage("Saved");
 		}
 		return message;
 	}
@@ -37,23 +37,23 @@ public class CityServiceImpl implements CityService {
 	}
 
 	@Override
-	public String deleteCity(int cityId) {
-		String message = null;
+	public CityResponse deleteCity(int cityId) {
+		CityResponse message = new CityResponse();
 		if (cityId <= 0 || cityId > 0) {
 			cityRepository.deleteById(cityId);
-			message = "Deleted";
+			message.setMessage("Deleted");
 		} else {
-			message = "Id cannot be null";
+			message.setMessage("Id cannot be null");
 		}
 		return message;
 	}
 
 	@Override
-	public String deleteAll() {
-		String message = null;
+	public CityResponse deleteAll() {
+		CityResponse response = new CityResponse();
 		cityRepository.deleteAll();
-		message = "All deleted";
-		return message;
+		response.setMessage("All deleted");
+		return response;
 	}
 
 	@Override
