@@ -1,5 +1,7 @@
 # Web Service Portfolio Project
 
+[![CI](https://github.com/msaf9/webservicePortfolioProject/actions/workflows/main.yml/badge.svg)](https://github.com/msaf9/webservicePortfolioProject/actions/workflows/main.yml)
+
 ## About
 - A RESTful web service; that provides different cities details.
 
