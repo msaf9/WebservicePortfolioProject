@@ -16,3 +16,8 @@
 
 ## Endpoints
 [Endpoints](ENDPOINTS.md)
+
+## License & copyright
+© Sahil Afrid Farookhi & Sivaram
+
+Lincensed under the [MIT License](LICENSE)
