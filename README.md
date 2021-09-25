@@ -2,22 +2,38 @@
 
 [![CI](https://github.com/msaf9/webservicePortfolioProject/actions/workflows/main.yml/badge.svg)](https://github.com/msaf9/webservicePortfolioProject/actions/workflows/main.yml)
 
-## About
+RESTful Web Services using Spring framework.
+
+## Table of contents
+
+1. Introduction
+2. Technologies
+3. Project status
+4. Installation
+5. License
+
+## Introduction
 - A RESTful web service; that provides different cities details.
 
-## Frameworks
+## Technologies
 - Spring
 
-## Modules
+### Modules
 - Spring Security
 - Spring Boot
 - Spring Data
 - Spring MVC
 
-## Endpoints
+## Project status
+> In progress
+
+### Endpoints
 [Endpoints](ENDPOINTS.md)
 
-## License & copyright
-© Sahil Afrid Farookhi & Sivaram
+## Installation
 
+## License
 Lincensed under the [MIT License](LICENSE)
+
+### Copyright
+© Sahil Afrid Farookhi & Sivaram
