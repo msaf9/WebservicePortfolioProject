@@ -15,6 +15,7 @@ import com.project.webservice.entity.City;
 import com.project.webservice.request.CityRequest;
 import com.project.webservice.response.CityResponse;
 import com.project.webservice.services.CityService;
+import com.project.webservice.services.CityServiceImpl;
 
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -26,7 +27,7 @@ import io.swagger.annotations.ApiResponses;
 public class CityEndpointV1 {
 
 	@Autowired
-	private CityService cityService;
+	private CityServiceImpl cityService;
 
 	@ApiOperation(value = "Create city", response = String.class)
 	@PostMapping(path = "/add")

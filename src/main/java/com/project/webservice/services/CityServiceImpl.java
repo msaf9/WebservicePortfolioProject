@@ -11,12 +11,12 @@ import com.project.webservice.request.CityRequest;
 import com.project.webservice.response.CityResponse;
 
 @Service
-public class CityServiceImpl implements CityService {
+public class CityServiceImpl {
 
 	@Autowired
 	private CityRepository cityRepository;
 
-	@Override
+//	@Override
 	public CityResponse addNewCity(CityRequest cityRequest) {
 		CityResponse message = new CityResponse();
 		if (cityRequest != null) {
@@ -31,12 +31,12 @@ public class CityServiceImpl implements CityService {
 		return message;
 	}
 
-	@Override
+//	@Override
 	public List<City> viewAllCity() {
 		return (List<City>) cityRepository.findAll();
 	}
 
-	@Override
+//	@Override
 	public CityResponse deleteCity(int cityId) {
 		CityResponse message = new CityResponse();
 		if (cityId <= 0 || cityId > 0) {
@@ -48,7 +48,7 @@ public class CityServiceImpl implements CityService {
 		return message;
 	}
 
-	@Override
+//	@Override
 	public CityResponse deleteAll() {
 		CityResponse response = new CityResponse();
 		cityRepository.deleteAll();
@@ -56,7 +56,7 @@ public class CityServiceImpl implements CityService {
 		return response;
 	}
 
-	@Override
+//	@Override
 	public CityResponse editCity(City cityRequest) {
 		CityResponse response = new CityResponse();
 		City cityUpdate = cityRepository.findById(cityRequest.getCityId()).get();
@@ -69,7 +69,7 @@ public class CityServiceImpl implements CityService {
 		return response;
 	}
 
-	@Override
+//	@Override
 	public City viewCity(int id) {
 		City cityView = cityRepository.findById(id).get();
 		return cityView;

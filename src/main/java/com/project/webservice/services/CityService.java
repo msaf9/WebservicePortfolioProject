@@ -19,5 +19,5 @@ public interface CityService {
 	CityResponse editCity(City cityRequest);
 
 	City viewCity(int id);
-
+	
 }
