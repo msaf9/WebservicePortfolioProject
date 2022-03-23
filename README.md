@@ -25,7 +25,7 @@ RESTful Web Services using Spring framework.
 - Spring MVC
 
 ## Project status
-> In progress
+> In progress (Deployment)
 
 ### Endpoints
 [Endpoints](ENDPOINTS.md)
