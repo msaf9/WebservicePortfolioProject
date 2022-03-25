@@ -18,6 +18,9 @@ RESTful Web Services using Spring framework.
 ## Technologies
 - Spring
 
+### Deployment
+- Heroku
+
 ### Modules
 - Spring Security
 - Spring Boot
