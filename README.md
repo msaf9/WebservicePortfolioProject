@@ -6,11 +6,11 @@ RESTful Web Services using Spring framework.
 
 ## Table of contents
 
-1. Introduction
-2. Technologies
-3. Project status
-4. Installation
-5. License
+- [Introduction](#introduction)
+- [Cloud](#cloud)
+- [Project status](#project-status)
+- [Installation](#installation)
+- [License](#license)
 
 ## Introduction
 - A RESTful web service; that provides different cities details.
@@ -18,7 +18,7 @@ RESTful Web Services using Spring framework.
 ## Technologies
 - Spring
 
-### Deployment
+### Cloud
 - Heroku
 
 ### Modules
